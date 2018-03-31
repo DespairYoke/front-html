@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        a{
+            cursor: pointer;
+        }
+        .bingli{
+            margin-top: 50px;
+            width: 1200px;
+            height: 600px;
+        }
+        .mag-left{
+            margin-left:150px;
+            height: 50px;
+            line-height: 50px;
+        }
+        .list{
+            display: flex;
+            justify-content: left;
+            /*flex-wrap:wrap;*/
+            list-style: none;
+        }
+        .list > li{
+            margin-left: 130px;
+        }
+        .list  > li:first-child{
+            margin-left: 50px;
+        }
+        .list > .phone{
+            margin-left: 100px;
+        }
+        #rule .jiuzheng{
+            width: 1000px;
+            height: 550px;
+            /*background: #0c5460;*/
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+            <div class="container border text-center bingli">
+                <ul id="myTab" class="nav nav-tabs container" role="tablist" >
+                    <li class="active mag-left"><a href="#guke" role="tab" data-toggle="tab" onclick="getgukeputong()" class="bingli">骨科</a></li>
+                    <li class="mag-left"><a href="#yake" role="tab" data-toggle="tab" onclick="getyakeputong()">牙科</a></li>
+                    <li class="mag-left"><a href="#look" role="tab" data-toggle="tab" onclick="lookbingli()">查看病例</a></li>
+                    <li class="mag-left"><a href="#account" role="tab" data-toggle="tab">账号信息</a></li>
+                    <li class="mag-left"><a href="#security" role="tab"  data-toggle="tab" onclick="lookzhiliao()">查看治疗</a></li>
+
+                </ul>
+                <!-- 选项卡面板 -->
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane active" id="guke">
+                        <div class="pane1">
+                            <div class="tab">
+                                <a onclick="getgukeputong()">普通</a>
+                                <a>高级</a>
+                                <a onclick="getgukezhuanjia()">专家</a>
+                            </div>
+                            <div class="tab-content">
+                                 <table class="table table-bordered">
+                                     <tr>
+                                         <td>姓名</td>
+                                         <td>联系方式</td>
+                                     </tr>
+                                     <tbody id="gukecontent">
+                                        <!-- <tr>
+                                            <td>111</td>
+                                            <td>联222系方式</td>
+                                        </tr>
+                                        <tr>
+                                            <td>姓22名</td>
+                                            <td>联22系方式</td>
+                                        </tr> -->
+                                     </tbody>
+                                 </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane " id="yake">
+                        <div class="pane1">
+                            <div class="tab">
+                                <a onclick="getyakeputong()">普通</a>
+                                <a>高级</a>
+                                <a onclick="getyakezhuanjia()">专家</a>
+                            </div>
+                            <div class="tab-content">
+                                 <table class="table table-bordered">
+                                     <tr>
+                                         <td>姓名</td>
+                                         <td>联系方式</td>
+                                     </tr>
+                                     <tbody id="yakecontent">
+
+                                     </tbody>
+                                     <!-- <tr>
+                                         <td>111</td>
+                                         <td>联222系方式</td>
+                                     </tr><tr>
+                                         <td>姓22名</td>
+                                         <td>联22系方式</td>
+                                     </tr> -->
+                                 </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="look">
+                        <div class="pane2">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>姓名</td>
+                                    <td>性别</td>
+                                    <td>年龄</td>
+                                    <td>病因</td>
+                                    <td>时间</td>
+                                </tr>
+                                <tbody id="binglicontent">
+
+                                </tbody>
+                                <!-- <tr>
+                                    <td>姓名</td>
+                                    <td>性别</td>
+                                    <td>年龄</td>
+                                    <td>病因</td>
+                                    <td>时间</td>
+                                </tr> -->
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane " id="account">
+                        <div class="pane3">
+                            <p><span class="title">姓名:</span>抱抱</p>
+                            <p><span class="title">手机号:</span>17777777777</p>
+                            <p><span class="title">性别:</span>女</p>
+                            <p><span class="title">年龄:</span>18</p>
+                            <p><span class="title">密码:</span>****<a style="display: inline-block;margin-left: 20px;" href="">修改密码</a></p>
+                        </div>
+                    </div>
+                    <div class="tab-pane " id="security">
+                        <div class="pane2">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>主治医师</td>
+                                    <td>病因</td>
+                                    <td>治疗方案</td>
+                                    <!-- <td>时间</td> -->
+                                    <td>联系方式</td>
+                                </tr>
+                                <tbody id="zhiliaocontent">
+
+                                </tbody>
+                            
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+<script src="../js/jquery-3.0.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/index.js"></script>
+</html>

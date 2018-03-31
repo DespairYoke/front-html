@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        .bingli{
+            margin-top: 50px;
+            width: 1200px;
+            height: 600px;
+        }
+        .mag-left{
+            margin-left:170px;
+            height: 50px;
+            line-height: 50px;
+        }
+        .list{
+            display: flex;
+            justify-content: left;
+            /*flex-wrap:wrap;*/
+            list-style: none;
+        }
+        .list > li{
+            margin-left: 150px;
+        }
+      .list  > li:first-child{
+            margin-left: 50px;
+        }
+        .list > .phone{
+            margin-left: 100px;
+        }
+        #rule .jiuzheng{
+            width: 1000px;
+            height: 550px;
+            /*background: #0c5460;*/
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+            <div class="container border text-center bingli">
+                <ul id="myTab" class="nav nav-tabs container" role="tablist" >
+                    <li class="mag-left"><a href="#look" role="tab" data-toggle="tab" onclick="lookbingli()">查看病例</a></li>
+                    <li class="mag-left"><a href="#rule" role="tab" data-toggle="tab">就诊</a></li>
+                    <li class="mag-left"><a href="#forum" role="tab" data-toggle="tab" onclick="selectalldoctor()">参考医生</a></li>
+                    <li class="mag-left"><a href="#security" role="tab"  data-toggle="tab" onclick="selectalldrug()">药品</a></li>
+
+
+                </ul>
+                <!-- 选项卡面板 -->
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane" id="look">
+                        <div class="pane2">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>姓名</td>
+                                    <td>性别</td>
+                                    <td>年龄</td>
+                                    <td>病因</td>
+                                    <td>联系方式</td>
+                                    <td>时间</td>
+                                    <td>治疗方案</td>
+                                </tr>
+                                <tbody id="binglicontent">
+
+                                </tbody>
+                                <!-- <tr>
+                                    <td>姓名</td>
+                                    <td>性别</td>
+                                    <td>年龄</td>
+                                    <td>病因</td>
+                                    <td>时间</td>
+                                </tr> -->
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane " id="forum">
+                        <div class="pane2">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>部门</td>
+                                    <td>姓名</td>
+                                    <td>诊断病情</td>
+                                    <td>治疗方案</td>
+                                    <td>联系方式</td>
+                                    <!-- <td>时间</td> -->
+                                </tr>
+                                <tbody id="doctor">
+
+                                </tbody>
+
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane " id="security">
+                        <div class="pane2">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>药品名</td>
+                                    <td>价格</td>
+                                    <td>作用</td>
+                                    <!-- <td>时间</td> -->
+                                </tr>
+                                <tbody id="drug">
+
+                                </tbody>
+
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane " id="rule">
+                        <!--<div>-->
+                        <!--<span for="firstname" class="">名字</span>-->
+                        <!--<input type="text" class=""  placeholder="请输入名字">-->
+                        <!--</div>-->
+                        <!--<div>-->
+                        <!--<span for="firstname" class="">手机</span>-->
+                        <!--<input type="text" class=""  placeholder="请输入名字">-->
+                        <!--</div>-->
+                        <!--<div>-->
+                        <!--<span for="firstname" class="">年纪</span>-->
+                        <!--<input type="text" class=""  placeholder="请输入名字">-->
+                        <!--</div>-->
+                        <!--<div>-->
+                        <!--<span for="firstname" class="">性别</span>-->
+                        <!--<input type="text" class=""  placeholder="请输入名字">-->
+                        <!--</div>-->
+                        <!--<div>-->
+                        <!--<span for="firstname" class="">药品</span>-->
+                        <!--<input type="text" class=""  placeholder="请输入药品">-->
+                        <!--</div>-->
+                        <form  style="margin-top: 50px">
+                            姓名：<input type="text" name="name"><br>
+                            性别：<input type="text" name="sex" style="margin-top: 10px"><br>
+                            年龄：<input type="text" name="age" style="margin-top: 10px"><br>
+                            手机：<input type="text" name="phone" style="margin-top: 10px"><br>
+                            药品：<input type="text" name="drugname" style="margin-top: 10px"><br>
+                            数量：<input type="text" name="drugnumber" style="margin-top: 10px"><br>
+                            病因：<input type="text" name="pathogeny" style="margin-top: 10px"><br>
+                            方案：<input type="text" name="result" style="margin-top: 10px"><br>
+                            <input type="submit" onclick="addUser()">
+                        </form>
+                            <div id="success">
+                            <div>
+                    </div>
+                </div>
+            </div>
+                    <!--<div class="tab-pane " id="forum">-->
+                        <!--医生内容面板-->
+    </div>
+                    <!--</div>-->
+</body>
+<script src="../js/jquery-3.0.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/index.js"></script>
+</html>
