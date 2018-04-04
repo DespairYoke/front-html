@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        body{
+            background-image: url('../img/500721999.jpg');
+            background-size:100%;   
+        }
+       .bg-content{
+           width:100%;
+           position: absolute;
+           top:0;
+           left:0;
+           right:0;
+           bottom:0;
+           background-color:rgba(0,0,0,0.4)
+       }
+       .container{
+           width:300px;
+           border-radius: 5px;
+           height:300px;
+           background:#fff;
+           text-align:center;
+           line-height:20px;
+           margin:250px auto 0; 
+           padding:20px 20px;
+       }
+       .btn{
+           margin-top:20px;
+       }
+    </style>
+</head>
+<body>
+    <div class="bg-content">
+        <div class=container>
+                <form>
+                        <fieldset>
+                          <legend>登录</legend><br><br>
+                          <input type="text" placeholder="请输入用户名"><br><br>
+                          <input type="password" placeholder="请输入密码"><br><br>
+                          <input type="checkbox"> 记住我<br>
+                          <button type="submit" class="btn btn-info">登录</button>
+                        </fieldset>
+                      </form>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery-3.0.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/index.js"></script>
+</html>

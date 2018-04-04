@@ -6,6 +6,17 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/index.css">
     <style>
+         .pws{
+            display: none;
+        }
+        body{
+            background:rgb(230, 239, 255);
+        }
+        .container{
+            /* background:#fff; */
+            border-radius: 10px;
+
+        }
         a{
             cursor: pointer;
         }
@@ -43,13 +54,13 @@
     </style>
 </head>
 <body>
-    <div>
-            <div class="container border text-center bingli">
+    <div class="bg-content">
+            <div class="container  text-center bingli">
                 <ul id="myTab" class="nav nav-tabs container" role="tablist" >
                     <li class="active mag-left"><a href="#guke" role="tab" data-toggle="tab" onclick="getgukeputong()" class="bingli">骨科</a></li>
                     <li class="mag-left"><a href="#yake" role="tab" data-toggle="tab" onclick="getyakeputong()">牙科</a></li>
                     <li class="mag-left"><a href="#look" role="tab" data-toggle="tab" onclick="lookbingli()">查看病例</a></li>
-                    <li class="mag-left"><a href="#account" role="tab" data-toggle="tab">账号信息</a></li>
+                    <li class="mag-left"><a href="#account" role="tab" data-toggle="tab" onclick="personInfo()">账号信息</a></li>
                     <li class="mag-left"><a href="#security" role="tab"  data-toggle="tab" onclick="lookzhiliao()">查看治疗</a></li>
 
                 </ul>
@@ -59,7 +70,6 @@
                         <div class="pane1">
                             <div class="tab">
                                 <a onclick="getgukeputong()">普通</a>
-                                <a>高级</a>
                                 <a onclick="getgukezhuanjia()">专家</a>
                             </div>
                             <div class="tab-content">
@@ -86,7 +96,6 @@
                         <div class="pane1">
                             <div class="tab">
                                 <a onclick="getyakeputong()">普通</a>
-                                <a>高级</a>
                                 <a onclick="getyakezhuanjia()">专家</a>
                             </div>
                             <div class="tab-content">
@@ -135,11 +144,30 @@
                     </div>
                     <div class="tab-pane " id="account">
                         <div class="pane3">
-                            <p><span class="title">姓名:</span>抱抱</p>
-                            <p><span class="title">手机号:</span>17777777777</p>
-                            <p><span class="title">性别:</span>女</p>
-                            <p><span class="title">年龄:</span>18</p>
-                            <p><span class="title">密码:</span>****<a style="display: inline-block;margin-left: 20px;" href="">修改密码</a></p>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>名字</td>
+                                    <td class="personname"></td>
+                                    <!-- <td>时间</td> -->
+                                </tr>
+                                <tr>
+                                    <td>性别</td>
+                                    <td class="personsex"></td>
+                                </tr>
+                                <tr>
+                                    <td>手机</td>
+                                    <td class="personphone"></td>
+                                </tr>
+                            </table>
+                            <button onclick="updatepassword()">修改密码</button>
+                            <div class="pws">
+                                <div>
+                                    <input type="password" placeholder="请输入旧密码">
+                                    <input type="password" placeholder="请输入新密码" id="newpwd">
+                                </div>
+                                <button onclick="okpassword()">确认</button>
+                                <button onclick="cancel()">取消</button>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane " id="security">
@@ -155,7 +183,7 @@
                                 <tbody id="zhiliaocontent">
 
                                 </tbody>
-                            
+
                             </table>
                         </div>
 
